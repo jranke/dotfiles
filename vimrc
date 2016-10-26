@@ -22,16 +22,9 @@ Plug 'jalvesaq/R-Vim-runtime'
 Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-if !has('nvim')
-  Plug 'jcfaria/Vim-R-plugin' " for my vim version 7.4, legacy plugin not maintained by Jakson any more
-else
-  Plug 'jalvesaq/Nvim-R'
-endif
-
-call plug#end()
-
-" legacy Vim-R-plugin plugin {{{1
-if !has('nvim')
+if !exists("*job_getchannel")
+  " for vim versions <= 7.4.1453 use the legacy plugin not maintained any more
+  Plug 'jcfaria/Vim-R-plugin', { 'commit': 'd726d619f12a10fb5ac7967d373837735cff60f0' }
   "let vimrplugin_vsplit = 0
   "let vimrplugin_rconsole_width = 100
 
@@ -46,11 +39,14 @@ if !has('nvim')
   "vnoremap  r  *@<Esc>:call SendSelectionToR("echo", "down")<CR>
   " but this does not work as expected
 else
+  Plug 'jalvesaq/Nvim-R'
   vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
   "let R_source_args = "print.eval = TRUE"
   let R_vsplit = 1
   let R_assign = 0
 endif
+
+call plug#end()
 
 " R syntax {{{1
 let r_syntax_folding = 0
