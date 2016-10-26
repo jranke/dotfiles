@@ -23,7 +23,7 @@ Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 if !has('nvim')
-  Plug 'jranke/Vim-R-plugin' " for my vim version 7.4, legacy plugin not maintained by Jakson any more
+  Plug 'jcfaria/Vim-R-plugin' " for my vim version 7.4, legacy plugin not maintained by Jakson any more
 else
   Plug 'jalvesaq/Nvim-R'
 endif
