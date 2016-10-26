@@ -1,9 +1,9 @@
-" vim: foldmethod=marker foldlevel=0 ts=2 sw=2
-
+" vim: foldmethod=marker foldlevel=0 ts=2 sw=2 expandtab
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
 set expandtab
+set modeline
 filetype plugin on
 filetype indent on
 
@@ -23,33 +23,33 @@ Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 if !has('nvim')
-	Plug 'jranke/Vim-R-plugin' " for my vim version 7.4, legacy plugin not maintained by Jakson any more
+  Plug 'jranke/Vim-R-plugin' " for my vim version 7.4, legacy plugin not maintained by Jakson any more
 else
-	Plug 'jalvesaq/Nvim-R'
+  Plug 'jalvesaq/Nvim-R'
 endif
 
 call plug#end()
 
 " legacy Vim-R-plugin plugin {{{1
 if !has('nvim')
-	"let vimrplugin_vsplit = 0
-	"let vimrplugin_rconsole_width = 100
+  "let vimrplugin_vsplit = 0
+  "let vimrplugin_rconsole_width = 100
 
-	"let vimrplugin_pdfviewer = "/usr/bin/okular"
-	"let vimrplugin_openpdf = 0
-	let vimrplugin_assign = 0
-	"let vimrplugin_objbr_place = "script,left"
-	let r_syntax_folding = 1
-	let rmd_syn_hl_chunk = 1
+  "let vimrplugin_pdfviewer = "/usr/bin/okular"
+  "let vimrplugin_openpdf = 0
+  let vimrplugin_assign = 0
+  "let vimrplugin_objbr_place = "script,left"
+  let r_syntax_folding = 1
+  let rmd_syn_hl_chunk = 1
 
   let vimrplugin_map_r = 1 " is silent per default, therefore tried
-	"vnoremap  r  *@<Esc>:call SendSelectionToR("echo", "down")<CR>
+  "vnoremap  r  *@<Esc>:call SendSelectionToR("echo", "down")<CR>
   " but this does not work as expected
 else
-	vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
-	"let R_source_args = "print.eval = TRUE"
-	let R_vsplit = 1
-	let R_assign = 0
+  vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
+  "let R_source_args = "print.eval = TRUE"
+  let R_vsplit = 1
+  let R_assign = 0
 endif
 
 " R syntax {{{1
