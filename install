@@ -1,0 +1,24 @@
+#!/bin/bash
+# run this script as ./install as we set its working dir from $BASH_SOURCE
+cd $(dirname $BASH_SOURCE)
+
+# the path of the working dir
+BASE=$(pwd)
+
+# dotfiles to install
+for dotfile in bashrc vimrc; do
+  mkdir -pv bak  
+  [ -e ~/.$dotfile ] && mv -v ~/.$dotfile bak/.$dotfile
+  ln -sfv $BASE/$dotfile ~/.$dotfile
+done
+
+# git-prompt
+if [ ! -e ~/.git-prompt.sh ]; then
+  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+fi
+
+# scripts
+mkdir -pv ~/bin
+for bin in $BASE/bin/*; do
+  ln -svf $bin ~/bin
+done
