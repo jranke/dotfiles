@@ -22,25 +22,24 @@ Plug 'jalvesaq/R-Vim-runtime'
 Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
 " R plugin {{{2
-if !exists("*job_getchannel")
-  " for vim versions <= 7.4.1453 use the legacy plugin
+" for vim versions <= 7.4.1453 use the legacy plugin
+if !has('nvim') && !exists("*job_getchannel")
   Plug 'jcfaria/Vim-R-plugin', { 'commit': 'd726d619f12a10fb5ac7967d373837735cff60f0' }
-  "let vimrplugin_vsplit = 0
-  "let vimrplugin_rconsole_width = 100
-
-  "let vimrplugin_pdfviewer = "/usr/bin/okular"
-  "let vimrplugin_openpdf = 0
-  let vimrplugin_assign = 0
-  "let vimrplugin_objbr_place = "script,left"
-  let rmd_syn_hl_chunk = 1
 
   let vimrplugin_map_r = 1 " is silent per default, therefore tried
   "vnoremap  r  *@<Esc>:call SendSelectionToR("echo", "down")<CR>
   " but this does not work as expected
+
+  let vimrplugin_assign = 0
+  let rmd_syn_hl_chunk = 1
+  "let vimrplugin_vsplit = 0
+  "let vimrplugin_rconsole_width = 100
+  "let vimrplugin_pdfviewer = "/usr/bin/okular"
+  "let vimrplugin_openpdf = 0
+  "let vimrplugin_objbr_place = "script,left"
 else
   Plug 'jalvesaq/Nvim-R'
   vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
-  "let R_source_args = "print.eval = TRUE"
   let R_vsplit = 1
   let R_assign = 0
 endif

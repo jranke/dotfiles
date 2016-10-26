@@ -6,7 +6,7 @@ cd $(dirname $BASH_SOURCE)
 BASE=$(pwd)
 
 # dotfiles to install
-for dotfile in bashrc vimrc gitconfig tmux.conf reportbugrc; do
+for dotfile in bashrc vimrc gitconfig Rprofile tmux.conf reportbugrc; do
   mkdir -pv bak  
   [ -e ~/.$dotfile ] && mv -v ~/.$dotfile bak/.$dotfile
   ln -sfv $BASE/$dotfile ~/.$dotfile
