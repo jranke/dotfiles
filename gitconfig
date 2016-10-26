@@ -1,0 +1,9 @@
+# vim: ft=gitconfig
+[user]
+	name = Johannes Ranke
+	email = jranke@uni-bremen.de
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = input
