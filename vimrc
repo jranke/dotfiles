@@ -32,7 +32,6 @@ if !exists("*job_getchannel")
   "let vimrplugin_openpdf = 0
   let vimrplugin_assign = 0
   "let vimrplugin_objbr_place = "script,left"
-  let r_syntax_folding = 1
   let rmd_syn_hl_chunk = 1
 
   let vimrplugin_map_r = 1 " is silent per default, therefore tried
