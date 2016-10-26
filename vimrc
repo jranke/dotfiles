@@ -23,6 +23,7 @@ Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
 " R plugin {{{2
 " for vim versions <= 7.4.1453 use the legacy plugin
+" Note that on wheezy, vim is too old even for that
 if !has('nvim') && !exists("*job_getchannel")
   Plug 'jcfaria/Vim-R-plugin', { 'commit': 'd726d619f12a10fb5ac7967d373837735cff60f0' }
 
