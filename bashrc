@@ -7,7 +7,7 @@ then
 else 
     if [ -e /usr/bin/vim ]
     then
-		EDITOR=/usr/bin/nvim
+		EDITOR=/usr/bin/vim
     else
 		EDITOR=/usr/bin/vi
     fi
