@@ -47,7 +47,9 @@ export DEBEMAIL=jranke@uni-bremen.de
 export DEBFULLNAME="Johannes Ranke"
 # }}}
 # ssh-agent {{{
-eval `ssh-agent -s`
+if [ -z "$SSH_AUTH_SOCK" ]; then
+  eval `ssh-agent -s`
+fi
 # }}}
 # rdkit {{{
 # RDKIT (commented out on 2015-10-02 as I am using the Debian package python-rdkit
