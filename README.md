@@ -16,10 +16,13 @@ plugins, open vim and type
 :PlugInstall
 ```
 
-For vim versions <= 7.4.1453 (but > 7.4) the legacy vim plugin
-Vim-R-plugin version 1.2.8 will be configured for vim-plug.
-To install the corresponding vimcom package from github, type
+For vim versions <= 7.4.1453 (as on Debian jessie) the legacy vim plugin
+Vim-R-plugin version 1.2.8 will be configured for vim-plug. To install the
+corresponding vimcom package from github, type
 
 ```bash
 make vimcom
 ```
+
+Note that the vim version in Debian wheezy is < 7.4 and therefore an even older
+version of the R plugin would be necessary.
