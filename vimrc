@@ -21,9 +21,9 @@ Plug 'hrp/EnhancedCommentify'
 Plug 'jalvesaq/R-Vim-runtime'
 Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
-
+" R plugin {{{2
 if !exists("*job_getchannel")
-  " for vim versions <= 7.4.1453 use the legacy plugin not maintained any more
+  " for vim versions <= 7.4.1453 use the legacy plugin
   Plug 'jcfaria/Vim-R-plugin', { 'commit': 'd726d619f12a10fb5ac7967d373837735cff60f0' }
   "let vimrplugin_vsplit = 0
   "let vimrplugin_rconsole_width = 100
@@ -44,17 +44,13 @@ else
   let R_vsplit = 1
   let R_assign = 0
 endif
+" 2}}}
 
 call plug#end()
 
 " R syntax {{{1
 let r_syntax_folding = 0
 let rmd_syn_hl_chunk = 1
-
-" Search {{{1
-set infercase
-"set hlsearch
-set incsearch
 
 " Showmarks {{{1
 let marksCloseWhenSelected = 0
@@ -86,6 +82,7 @@ let pandoc#folding#fdc=0
 let pandoc#syntax#conceal#use=0
 
 " Show syntax highlighting under the cursor {{{1
+" More info available via mapping zS from tpope/vim-scriptease
 " http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
       \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
