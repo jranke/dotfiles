@@ -13,11 +13,6 @@ else
     fi
 fi
 # }}}
-# private bin {{{
-if [ -d ~/bin ] ; then
-    PATH=~/bin:"${PATH}"
-fi
-# }}}
 # R {{{
 # littler scripts distributed with the littler package
 PATH=/usr/local/lib/R/site-library/littler/examples:"${PATH}"
