@@ -14,7 +14,9 @@ local({
 if (interactive()) {
   library(colorout)
   library(setwidth)
-  # vimcom will generally only be installed on boxes where this is necessary
-  if (requireNamespace("vimcom")) options(vimcom.verbose = 1)
-  # However, vimcom does not get in the way of Nvim-R if it is loaded
+  # Load vimcom only if R was started by vim
+  if(Sys.getenv("VIMRPLUGIN_TMPDIR") != "") {
+    options(vimcom.verbose = 1)
+    library(vimcom)
+  }
 }
