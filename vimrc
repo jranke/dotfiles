@@ -21,6 +21,10 @@ Plug 'hrp/EnhancedCommentify'
 Plug 'jalvesaq/R-Vim-runtime'
 Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+
 " R plugin {{{2
 " for vim versions <= 7.4.1453 use the legacy plugin
 " Note that on wheezy, vim is too old even for that
@@ -94,23 +98,12 @@ function! SyntaxItem()
   return synIDattr(synID(line("."),col("."),1),"name")
 endfunction
 
-" Status line {{{1
-if has('statusline')
-  set statusline=%#Question#                   " set highlighting
-  set statusline+=%-2.2n\                      " buffer number
-  set statusline+=%#WarningMsg#                " set highlighting
-  set statusline+=%f\                          " file name
-  set statusline+=%#Question#                  " set highlighting
-  set statusline+=%h%m%r%w\                    " flags
-  set statusline+=%{strlen(&ft)?&ft:'none'},   " file type
-  set statusline+=%{(&fenc==\"\"?&enc:&fenc)}, " encoding
-  set statusline+=%{((exists(\"+bomb\")\ &&\ &bomb)?\"B,\":\"\")} " BOM
-  set statusline+=%{&fileformat},              " file format
-  set statusline+=%{&spelllang},               " language of spelling checker
-  set statusline+=%{SyntaxItem()}              " syntax highlight group under cursor
-  set statusline+=%=                           " ident to the right
-  set statusline+=0x%-8B\                      " character code under cursor
-  set statusline+=%-7.(%l,%c%V%)\ %<%P         " cursor position/offset
-endif
-
+" Airline {{{1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline_theme='wombat'
+call airline#parts#define_function('syntax', 'SyntaxItem')
+let g:airline_section_x=airline#section#create_right(['syntax', 'filetype'])
+" Always show statusline {{{1
 set laststatus=2
