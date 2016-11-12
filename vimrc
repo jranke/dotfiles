@@ -47,6 +47,8 @@ else
   vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
   let R_vsplit = 1
   let R_assign = 0
+  let R_pdfviewer = 'okular'
+  let R_openpdf = 0
 endif
 " 2}}}
 
