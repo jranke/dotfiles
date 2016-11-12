@@ -6,6 +6,8 @@ set expandtab
 set modeline
 filetype plugin on
 filetype indent on
+set splitbelow
+set splitright
 
 " to ease the use of plugin mappings
 let maplocalleader = ","
