@@ -1,4 +1,5 @@
-" vim: foldmethod=marker foldlevel=0 ts=2 sw=2 expandtab
+" vimrc of Johannes Ranke
+" Last Change: Sat Nov 12, 2016 at 09:43 PM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -26,6 +27,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
+Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
 
 " R plugin {{{2
 " for vim versions <= 7.4.1453 use the legacy plugin
@@ -39,11 +41,8 @@ if !has('nvim') && !exists("*job_getchannel")
 
   let vimrplugin_assign = 0
   let rmd_syn_hl_chunk = 1
-  "let vimrplugin_vsplit = 0
-  "let vimrplugin_rconsole_width = 100
-  "let vimrplugin_pdfviewer = "/usr/bin/okular"
-  "let vimrplugin_openpdf = 0
-  "let vimrplugin_objbr_place = "script,left"
+  let vimrplugin_pdfviewer = "/usr/bin/okular"
+  let vimrplugin_openpdf = 0
 else
   Plug 'jalvesaq/Nvim-R'
   vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
@@ -111,3 +110,4 @@ call airline#parts#define_function('syntax', 'SyntaxItem')
 let g:airline_section_x=airline#section#create_right(['syntax', 'filetype'])
 " Always show statusline {{{1
 set laststatus=2
+" {{{1 vim: foldmethod=marker foldlevel=0 ts=2 sw=2 expandtab
