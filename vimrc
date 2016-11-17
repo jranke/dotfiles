@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Tue Nov 15, 2016 at 08:11 AM +0100
+" Last Change: Thu Nov 17, 2016 at 06:09 PM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -28,6 +28,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
+Plug 'vim-scripts/DeleteTrailingWhitespace'
 
 " R plugin {{{2
 " for vim versions <= 7.4.1453 use the legacy plugin
