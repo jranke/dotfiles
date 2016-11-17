@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Sat Nov 12, 2016 at 09:43 PM +0100
+" Last Change: Tue Nov 15, 2016 at 08:11 AM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -110,4 +110,16 @@ call airline#parts#define_function('syntax', 'SyntaxItem')
 let g:airline_section_x=airline#section#create_right(['syntax', 'filetype'])
 " Always show statusline {{{1
 set laststatus=2
+" Mappings for easier navigation of windows {{{1
+" From :help terminal-emulator-input in neovim
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+if has('nvim') 
+  tnoremap <A-h> <C-\><C-n><C-w>h
+  tnoremap <A-j> <C-\><C-n><C-w>j
+  tnoremap <A-k> <C-\><C-n><C-w>k
+  tnoremap <A-l> <C-\><C-n><C-w>l
+endif
 " {{{1 vim: foldmethod=marker foldlevel=0 ts=2 sw=2 expandtab
