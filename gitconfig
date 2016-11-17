@@ -7,5 +7,6 @@
 [core]
 	excludesfile = ~/.gitignore
 	autocrlf = input
+	pager = less -S
 [merge]
 	tool = vimdiff
