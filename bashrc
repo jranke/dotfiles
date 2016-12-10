@@ -48,9 +48,11 @@ export DEBFULLNAME="Johannes Ranke"
 # }}}
 # rdkit {{{
 # RDKIT (commented out on 2015-10-02 as I am using the Debian package python-rdkit
-#export RDBASE="$HOME/git/rdkit"
-#export LD_LIBRARY_PATH="$RDBASE/lib"
 #export PYTHONPATH="${PYTHONPATH}:$RDBASE:$HOME/ariance/aeras/libreoffice:$HOME/py"
+# commended back in as switching to LibreOffice 5 from backports makes using python3 necessary
+export RDBASE="$HOME/git/rdkit"
+export LD_LIBRARY_PATH="$RDBASE/lib"
+export PYTHONPATH="${PYTHONPATH}:$RDBASE"
 # }}}
 # prompt {{{
 force_color_prompt=yes
