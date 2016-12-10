@@ -12,6 +12,15 @@ for dotfile in bashrc vimrc gitconfig Rprofile tmux.conf reportbugrc; do
   ln -sfv $BASE/$dotfile ~/.$dotfile
 done
 
+# nvim config
+if [ ! -e ~/.config/nvim ]; then
+  ln -sfv ~/.vim ~/.config/nvim
+fi
+if [ ! -e ~/.config/nvim/init.vim ]; then
+  ln -sfv ~/.vimrc ~/.config/nvim/init.vim
+fi
+
+
 # git-prompt
 if [ ! -e ~/.git-prompt.sh ]; then
   curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
