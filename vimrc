@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Thu Nov 17, 2016 at 06:09 PM +0100
+" Last Change: Tue Jan 10, 2017 at 04:48 PM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -21,7 +21,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-scriptease' " gives me K for looking up docs in vim scripts
 Plug 'hrp/EnhancedCommentify'
-Plug 'jalvesaq/R-Vim-runtime'
+"Plug 'jalvesaq/R-Vim-runtime'
+Plug '~/git/R-Vim-runtime'
 Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-airline/vim-airline'
