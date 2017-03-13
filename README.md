@@ -26,4 +26,3 @@ make vimcom
 
 Note that the vim version in Debian wheezy is < 7.4 and therefore an even older
 version of the R plugin would be necessary.
-
