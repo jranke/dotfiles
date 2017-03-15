@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Tue Jan 17, 2017 at 09:00 AM +0100
+" Last Change: Wed Mar 15, 2017 at 10:19 AM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -49,7 +49,6 @@ else
   Plug 'jalvesaq/Nvim-R'
   "Plug '~/git/Nvim-R', { 'branch': 'rstudio' }
   vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
-  let R_vsplit = 1
   let R_assign = 0
   let R_pdfviewer = 'okular'
   let R_openpdf = 0
