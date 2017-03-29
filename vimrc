@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Wed Mar 15, 2017 at 10:19 AM +0100
+" Last Change: Wed Mar 29, 2017 at 05:02 PM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -52,6 +52,7 @@ else
   let R_assign = 0
   let R_pdfviewer = 'okular'
   let R_openpdf = 0
+  let R_min_editor_width = 100 
   "let R_in_buffer = 0
   "let RStudio_cmd = '/usr/bin/rstudio'
 endif
