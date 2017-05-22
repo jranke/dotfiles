@@ -20,3 +20,6 @@ if (interactive()) {
     library(vimcom)
   }
 }
+
+# For (re)installing PythonInR
+Sys.setenv(USESPECIALPYTHONVERSION="python3.5")

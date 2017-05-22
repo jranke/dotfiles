@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Wed Mar 29, 2017 at 05:02 PM +0200
+" Last Change: Mon May 22, 2017 at 07:20 PM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -23,7 +23,8 @@ Plug 'tpope/vim-scriptease' " gives me K for looking up docs in vim scripts
 Plug 'hrp/EnhancedCommentify'
 "Plug 'jalvesaq/R-Vim-runtime'
 Plug '~/git/R-Vim-runtime'
-Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
+Plug 'vim-pandoc/vim-pandoc'
+"Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -75,12 +76,13 @@ let g:tex_fold_enabled=1
 let g:rmd_syn_fold=1
 
 " Beamer/tex environments - should go to some after/tex.vim script {{{1
+noremap \bb i\begin{block}{}<CR><CR>\end{block}<CR><ESC>3k14li
+noremap \bc i\begin{center}<CR><CR>\end{center}<CR><ESC>2ki
 noremap \bf i\begin{frame}{}<Space>%{{{3<CR><CR>\end{frame}<CR><ESC>3k14li
 noremap \bi i\begin{itemize}[<+->]<CR>\item <CR>\end{itemize}<ESC>k8li
-noremap \bc i\begin{center}<CR><CR>\end{center}<CR><ESC>2ki
-noremap \bt i\begin{table}\begin{tabular}{}<CR><CR>\end{tabular}\end{table}<CR><ESC>3ki
 noremap \bo i\begin{columns}<CR>\begin{column}{}<CR>\end{column}<CR>\end{columns}<CR><ESC>3k17li
 noremap \bs i\source{}<ESC>li
+noremap \bt i\begin{table}\begin{tabular}{}<CR><CR>\end{tabular}\end{table}<CR><ESC>3ki
 noremap \eq i\question[2]<CR>\begin{solution}[2cm]<CR>\end{solution}<CR><ESC>3kA
 
 " EnhancedCommentify {{{1
