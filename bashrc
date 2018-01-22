@@ -23,23 +23,6 @@ export RPYTHON_PYTHON_VERSION=3
 # python3-uno from RPython
 PATH=/usr/lib/libreoffice/program:"${PATH}"
 
-# Vim-R-plugin
-# From r-plugin-bash-setup help page in Vim-R-plugin (Debian package 1.2-1)
-# Change the TERM environment variable (to get 256 colors) and make Vim 
-# connect to th X Server even if running in a terminal emulator (many of 
-# the plugin features depend on this). Now only needed for "old" vim
-# like vim 7.4 from Debian stable
-if [ "x$DISPLAY" != "x" ]
-then
-		if [ "screen" = "$TERM" ]
-		then
-				export TERM=screen-256color
-		else
-				export TERM=xterm-256color
-		fi
-		alias vim='vim --servername VIM'
-fi
-
 alias tarxz='tar --use-compress-program=pxz -c -v -f'
 
 # Path where the R sources are

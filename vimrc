@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Tue Sep 12, 2017 at 09:52 AM +0200
+" Last Change: Mon Jan 22, 2018 at 05:28 PM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -33,6 +33,7 @@ Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
 Plug 'vim-scripts/DeleteTrailingWhitespace'
 
 " R plugin {{{2
+<<<<<<< HEAD
 " for vim versions <= 7.4.1453 use the legacy plugin
 " Note that on wheezy, vim is too old even for that
 if !has('nvim') && !exists("*job_getchannel")
@@ -58,6 +59,17 @@ else
   "let R_in_buffer = 0
   "let RStudio_cmd = '/usr/bin/rstudio'
 endif
+=======
+Plug 'jalvesaq/Nvim-R'
+"Plug '~/git/Nvim-R', { 'branch': 'rstudio' }
+vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
+let R_assign = 0
+let R_pdfviewer = 'okular'
+let R_openpdf = 0
+let R_min_editor_width = 100 
+"let R_in_buffer = 0
+"let RStudio_cmd = '/usr/bin/rstudio'
+>>>>>>> ebd7e9bbbaed28f36472fe520c98c44c36175d24
 " 2}}}
 
 call plug#end()
