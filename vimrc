@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Mon Jan 22, 2018 at 05:28 PM +0100
+" Last Change: Mon Jan 22, 2018 at 05:29 PM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -33,33 +33,6 @@ Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
 Plug 'vim-scripts/DeleteTrailingWhitespace'
 
 " R plugin {{{2
-<<<<<<< HEAD
-" for vim versions <= 7.4.1453 use the legacy plugin
-" Note that on wheezy, vim is too old even for that
-if !has('nvim') && !exists("*job_getchannel")
-  Plug 'jcfaria/Vim-R-plugin', { 'commit': 'd726d619f12a10fb5ac7967d373837735cff60f0' }
-
-  let vimrplugin_map_r = 1 " is silent per default, therefore tried
-  "vnoremap  r  *@<Esc>:call SendSelectionToR("echo", "down")<CR>
-  " but this does not work as expected
-
-  let vimrplugin_assign = 0
-  let rmd_syn_hl_chunk = 1
-  let vimrplugin_pdfviewer = "/usr/bin/okular"
-  let vimrplugin_openpdf = 0
-else
-  Plug 'jalvesaq/Nvim-R'
-  "Plug '~/git/Nvim-R', { 'branch': 'rstudio' }
-  vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
-  let R_assign = 0
-  let R_pdfviewer = 'okular'
-  let R_openpdf = 0
-  let R_min_editor_width = 100
-  let R_rconsole_width = 80
-  "let R_in_buffer = 0
-  "let RStudio_cmd = '/usr/bin/rstudio'
-endif
-=======
 Plug 'jalvesaq/Nvim-R'
 "Plug '~/git/Nvim-R', { 'branch': 'rstudio' }
 vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
@@ -67,9 +40,9 @@ let R_assign = 0
 let R_pdfviewer = 'okular'
 let R_openpdf = 0
 let R_min_editor_width = 100 
+let R_rconsole_width = 80
 "let R_in_buffer = 0
 "let RStudio_cmd = '/usr/bin/rstudio'
->>>>>>> ebd7e9bbbaed28f36472fe520c98c44c36175d24
 " 2}}}
 
 call plug#end()
