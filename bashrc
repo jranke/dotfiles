@@ -20,6 +20,9 @@ PATH=/usr/local/lib/R/site-library/littler/examples:"${PATH}"
 # RPython
 export RPYTHON_PYTHON_VERSION=3
 
+# python3-uno from RPython
+PATH=/usr/lib/libreoffice/program:"${PATH}"
+
 # Vim-R-plugin
 # From r-plugin-bash-setup help page in Vim-R-plugin (Debian package 1.2-1)
 # Change the TERM environment variable (to get 256 colors) and make Vim 
