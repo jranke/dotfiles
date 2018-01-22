@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Mon May 22, 2017 at 07:20 PM +0200
+" Last Change: Tue Sep 12, 2017 at 09:52 AM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -53,7 +53,8 @@ else
   let R_assign = 0
   let R_pdfviewer = 'okular'
   let R_openpdf = 0
-  let R_min_editor_width = 100 
+  let R_min_editor_width = 100
+  let R_rconsole_width = 80
   "let R_in_buffer = 0
   "let RStudio_cmd = '/usr/bin/rstudio'
 endif
@@ -102,7 +103,7 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
       \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
       \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-" Show syntax highlighting group in status line 
+" Show syntax highlighting group in status line
 " http://vim.wikia.com/wiki/Showing_syntax_highlight_group_in_statusline
 function! SyntaxItem()
   return synIDattr(synID(line("."),col("."),1),"name")
@@ -123,7 +124,7 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
-if has('nvim') 
+if has('nvim')
   tnoremap <A-h> <C-\><C-n><C-w>h
   tnoremap <A-j> <C-\><C-n><C-w>j
   tnoremap <A-k> <C-\><C-n><C-w>k
