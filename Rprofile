@@ -13,7 +13,6 @@ local({
 
 if (interactive()) {
   library(colorout)
-  library(setwidth)
   # Load vimcom only if R was started by vim
   if(Sys.getenv("VIMRPLUGIN_TMPDIR") != "") {
     options(vimcom.verbose = 1)
