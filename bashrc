@@ -4,7 +4,7 @@
 if [ -e /usr/bin/nvim ]
 then
     EDITOR=/usr/bin/nvim
-else 
+else
     if [ -e /usr/bin/vim ]
     then
 		EDITOR=/usr/bin/vim
@@ -16,12 +16,14 @@ fi
 # R {{{
 # littler scripts distributed with the littler package
 PATH=/usr/local/lib/R/site-library/littler/examples:"${PATH}"
+PATH=/usr/lib/R/site-library/littler/examples:"${PATH}"
 
+# Go back 
 # RPython
-export RPYTHON_PYTHON_VERSION=3
+#export RPYTHON_PYTHON_VERSION=3
 
 # python3-uno from RPython
-PATH=/usr/lib/libreoffice/program:"${PATH}"
+#PATH=/usr/lib/libreoffice/program:"${PATH}"
 
 alias tarxz='tar --use-compress-program=pxz -c -v -f'
 
@@ -35,15 +37,19 @@ export DEBFULLNAME="Johannes Ranke"
 # rdkit {{{
 # RDKIT (commented out on 2015-10-02 as I am using the Debian package python-rdkit
 #export PYTHONPATH="${PYTHONPATH}:$RDBASE:$HOME/ariance/aeras/libreoffice:$HOME/py"
-# commended back in as switching to LibreOffice 5 from backports makes using python3 necessary
-export RDBASE="$HOME/git/rdkit"
-export LD_LIBRARY_PATH="$RDBASE/lib"
-export PYTHONPATH="${PYTHONPATH}:$RDBASE"
+# commented back in as switching to LibreOffice 5 from backports makes using python3 necessary
+# The cmake command I used to try to build rdkit on stretch (2018-03-01) was
+# cmake -D PYTHON_LIBRARY=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/libpython3.5m.a -D PYTHON_INCLUDE_DIR=/usr/include/python3.5/ -D PYTHON_EXECUTABLE=/usr/bin/python3 -DRDK_BUILD_INCHI_SUPPORT=ON ..
+# However, then I get bitten by https://gitlab.kitware.com/cmake/cmake/issues/16391 which is unresolved
+# Therefore, as I do not want to compile boost from source for now, go back to python2.7 and comment the following again...
+#export RDBASE="$HOME/git/rdkit"
+#export LD_LIBRARY_PATH="$RDBASE/lib"
+#export PYTHONPATH="${PYTHONPATH}:$RDBASE"
 # }}}
 # prompt {{{
 force_color_prompt=yes
 
-# identify the current chroot 
+# identify the current chroot
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 		debian_chroot=$(cat /etc/debian_chroot)
 fi

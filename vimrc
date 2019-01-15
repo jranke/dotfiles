@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Mon Jan 22, 2018 at 05:29 PM +0100
+" Last Change: Tue Jan 15, 2019 at 11:12 AM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -9,6 +9,8 @@ filetype plugin on
 filetype indent on
 set splitbelow
 set splitright
+set mouse=a
+set guicursor=
 
 " to ease the use of plugin mappings
 let maplocalleader = ","
@@ -115,4 +117,5 @@ if has('nvim')
   tnoremap <A-k> <C-\><C-n><C-w>k
   tnoremap <A-l> <C-\><C-n><C-w>l
 endif
+colorscheme desert
 " {{{1 vim: foldmethod=marker foldlevel=0 ts=2 sw=2 expandtab

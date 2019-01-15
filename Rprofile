@@ -21,4 +21,4 @@ if (interactive()) {
 }
 
 # For (re)installing PythonInR
-Sys.setenv(USESPECIALPYTHONVERSION="python3.5")
+#Sys.setenv(USESPECIALPYTHONVERSION="python3.5")
