@@ -1,0 +1,15 @@
+# knitr cache directories
+*_cache/
+
+# libreoffice lock files
+.~lock*#
+
+*.tmp
+
+# Microsoft Office temporary files
+~$*.doc*
+~$*.xls*
+~$*.xlk*
+~$*.ppt*
+
+
