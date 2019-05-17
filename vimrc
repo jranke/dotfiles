@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Tue Jan 15, 2019 at 11:12 AM +0100
+" Last Change: Fri May 17, 2019 at 10:41 AM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -33,6 +33,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
 Plug 'vim-scripts/DeleteTrailingWhitespace'
+Plug 'scrooloose/nerdtree'
 
 " R plugin {{{2
 Plug 'jalvesaq/Nvim-R'
@@ -41,7 +42,7 @@ vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
 let R_assign = 0
 let R_pdfviewer = 'okular'
 let R_openpdf = 0
-let R_min_editor_width = 100 
+let R_min_editor_width = 100
 let R_rconsole_width = 80
 "let R_in_buffer = 0
 "let RStudio_cmd = '/usr/bin/rstudio'
