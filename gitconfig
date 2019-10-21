@@ -11,3 +11,6 @@
 	pager = less -S
 [merge]
 	tool = vimdiff
+[url "git@salsa.debian.org:"]
+	pushInsteadOf = https://salsa.debian.org/
+	insteadOf = salsa:

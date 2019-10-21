@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Fri May 17, 2019 at 10:41 AM +0200
+" Last Change: Wed Oct 09, 2019 at 11:20 AM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -41,7 +41,7 @@ Plug 'jalvesaq/Nvim-R'
 vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
 let R_assign = 0
 let R_pdfviewer = 'okular'
-let R_openpdf = 0
+let R_openpdf = 1
 let R_min_editor_width = 100
 let R_rconsole_width = 80
 "let R_in_buffer = 0
@@ -53,6 +53,7 @@ call plug#end()
 " R syntax {{{1
 let r_syntax_folding = 0
 let rmd_syn_hl_chunk = 1
+let r_indent_align_args = 0
 
 " Showmarks {{{1
 let marksCloseWhenSelected = 0
