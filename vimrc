@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Wed Oct 09, 2019 at 11:20 AM +0200
+" Last Change: Thu Oct 24, 2019 at 11:26 AM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -54,6 +54,9 @@ call plug#end()
 let r_syntax_folding = 0
 let rmd_syn_hl_chunk = 1
 let r_indent_align_args = 0
+" The following only has effect if vim-pandoc-syntax is disabled
+let g:rmd_fenced_languages = ['r', 'python']
+let g:markdown_fenced_languages = ['r', 'python']
 
 " Showmarks {{{1
 let marksCloseWhenSelected = 0
