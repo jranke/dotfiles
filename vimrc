@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Thu Oct 24, 2019 at 11:26 AM +0200
+" Last Change: Thu Nov 21, 2019 at 03:06 PM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -19,22 +19,32 @@ let mapleader = ";"
 " Plugins managed by vim-plug {{{1
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-fugitive'
+" The basics
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-scriptease' " gives me K for looking up docs in vim scripts
+Plug 'tpope/vim-eunuch'     " :Remove and the like
 Plug 'hrp/EnhancedCommentify'
+Plug 'vim-scripts/DeleteTrailingWhitespace'
+Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
+
+" Appearance
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/goyo.vim'
+
 "Plug 'jalvesaq/R-Vim-runtime'
 Plug '~/git/R-Vim-runtime'
 Plug 'vim-pandoc/vim-pandoc'
 "Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
-Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
-Plug 'vim-scripts/DeleteTrailingWhitespace'
-Plug 'scrooloose/nerdtree'
 
+" Version control
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" File system exploration
+Plug 'scrooloose/nerdtree'
+"
 " R plugin {{{2
 Plug 'jalvesaq/Nvim-R'
 "Plug '~/git/Nvim-R', { 'branch': 'rstudio' }
