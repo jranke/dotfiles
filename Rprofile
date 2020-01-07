@@ -11,14 +11,5 @@ local({
   options(repos = r)
 })
 
-if (interactive()) {
-  library(colorout)
-  # Load vimcom only if R was started by vim
-  if(Sys.getenv("VIMRPLUGIN_TMPDIR") != "") {
-    options(vimcom.verbose = 1)
-    library(vimcom)
-  }
-}
-
 # For (re)installing PythonInR
 #Sys.setenv(USESPECIALPYTHONVERSION="python3.5")
