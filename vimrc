@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Thu Nov 21, 2019 at 03:06 PM +0100
+" Last Change: Fri Nov 22, 2019 at 07:41 AM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -22,7 +22,6 @@ call plug#begin('~/.vim/plugged')
 " The basics
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-scriptease' " gives me K for looking up docs in vim scripts
-Plug 'tpope/vim-eunuch'     " :Remove and the like
 Plug 'hrp/EnhancedCommentify'
 Plug 'vim-scripts/DeleteTrailingWhitespace'
 Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
