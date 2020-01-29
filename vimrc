@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Fri Nov 22, 2019 at 07:41 AM +0100
+" Last Change: Wed Jan 29, 2020 at 08:10 AM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -34,7 +34,6 @@ Plug 'junegunn/goyo.vim'
 "Plug 'jalvesaq/R-Vim-runtime'
 Plug '~/git/R-Vim-runtime'
 Plug 'vim-pandoc/vim-pandoc'
-"Plug 'jranke/vim-pandoc', { 'branch': 'rmd' }
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " Version control
@@ -43,7 +42,10 @@ Plug 'airblade/vim-gitgutter'
 
 " File system exploration
 Plug 'scrooloose/nerdtree'
-"
+
+" Bracketed paste
+Plug 'ConradIrwin/vim-bracketed-paste'
+
 " R plugin {{{2
 Plug 'jalvesaq/Nvim-R'
 "Plug '~/git/Nvim-R', { 'branch': 'rstudio' }
