@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Wed Jan 29, 2020 at 08:10 AM +0100
+" Last Change: Wed Apr 08, 2020 at 10:09 AM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -57,6 +57,7 @@ let R_min_editor_width = 100
 let R_rconsole_width = 80
 "let R_in_buffer = 0
 "let RStudio_cmd = '/usr/bin/rstudio'
+Plug 'mllg/vim-devtools-plugin'
 " 2}}}
 
 call plug#end()
