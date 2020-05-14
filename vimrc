@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Wed Apr 08, 2020 at 10:09 AM +0200
+" Last Change: Mon May 11, 2020 at 08:29 AM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -46,7 +46,7 @@ Plug 'scrooloose/nerdtree'
 " Bracketed paste
 Plug 'ConradIrwin/vim-bracketed-paste'
 
-" R plugin {{{2
+" R plugin {{{1
 Plug 'jalvesaq/Nvim-R'
 "Plug '~/git/Nvim-R', { 'branch': 'rstudio' }
 vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
@@ -58,7 +58,14 @@ let R_rconsole_width = 80
 "let R_in_buffer = 0
 "let RStudio_cmd = '/usr/bin/rstudio'
 Plug 'mllg/vim-devtools-plugin'
-" 2}}}
+
+" The following is adapted from issue https://github.com/jalvesaq/Nvim-R/issues/476
+function StartRdevel()
+    let g:R_path = '~/svn/R/r-devel/build/bin'
+    call StartR("R-devel")
+endfunction
+
+nmap ,rx :call StartRdevel()<CR>
 
 call plug#end()
 

@@ -1,5 +1,6 @@
 options(pdfviewer="okular")
 options(browser="firefox")
+options(menu.graphics=FALSE)
 
 # R package repositories
 local({
