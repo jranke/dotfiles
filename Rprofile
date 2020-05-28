@@ -14,3 +14,8 @@ local({
 
 # For (re)installing PythonInR
 #Sys.setenv(USESPECIALPYTHONVERSION="python3.5")
+
+if (interactive()) {
+  suppressMessages(require(reprex))
+  suppressMessages(require(usethis))
+}
