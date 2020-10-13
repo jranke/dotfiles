@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Thu May 28, 2020 at 04:16 PM +0200
+" Last Change: Thu Jul 09, 2020 at 12:13 PM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -11,6 +11,7 @@ set splitbelow
 set splitright
 set mouse=a
 set guicursor=
+set hid "que to slow buffer switching, see https://github.com/neovim/neovim/issues/4524
 
 " to ease the use of plugin mappings
 let maplocalleader = ","
@@ -36,9 +37,9 @@ Plug '~/git/R-Vim-runtime'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 " The following plugin gives me <Leader>bd for closing a buffer while keeping
-" the window open, for example when editing several R scripts with 
+" the window open, for example when editing several R scripts with
 " the R interpreter running in a separate vim window
-Plug 'seb-mueller/kwbdi.vim' 
+Plug 'seb-mueller/kwbdi.vim'
 
 " Version control
 Plug 'tpope/vim-fugitive'

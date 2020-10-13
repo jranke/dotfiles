@@ -113,9 +113,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 # }}}
-# {{{ PythonInR
-export USESPECIALPYTHONVERSION="python3"
-# }}}
 # {{{varia
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
