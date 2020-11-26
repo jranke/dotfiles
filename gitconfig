@@ -1,16 +1,16 @@
 # vim: ft=gitconfig
 [user]
-	name = Johannes Ranke
-	email = jranke@uni-bremen.de
+  name = Johannes Ranke
+  email = jranke@uni-bremen.de
   signingkey = E19F 5F87 1288 99B1 92B1  A2C2 AD5F 960A 256A 04AF
 [push]
-	default = simple
+  default = simple
 [core]
-	excludesfile = ~/.gitignore
-	autocrlf = input
-	pager = less -S
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  pager = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less --tabs=4 -RFX
 [merge]
-	tool = vimdiff
+  tool = vimdiff
 [url "git@salsa.debian.org:"]
-	pushInsteadOf = https://salsa.debian.org/
-	insteadOf = salsa:
+  pushInsteadOf = https://salsa.debian.org/
+  insteadOf = salsa:
