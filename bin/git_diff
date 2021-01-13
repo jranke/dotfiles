@@ -4,7 +4,7 @@
 # From https://stackoverflow.com/a/7669988/3805440, thanks
 
 # side-by-side diff with custom options:
-# /usr/bin/sdiff -w200 -l "$2" "$5" 
+#/usr/bin/sdiff -w200 -l "$2" "$5" 
 
 # using kdiff3 as the side-by-side diff:
 /usr/bin/kdiff3 "$2" "$5"
@@ -13,5 +13,4 @@
 #/usr/bin/meld "$2" "$5"
 
 # using VIM
-#/usr/bin/vimdiff "$2" "$5"
-
+#/usr/bin/nvim -d "$2" "$5"

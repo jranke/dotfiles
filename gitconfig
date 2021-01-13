@@ -8,7 +8,6 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
-  pager = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less --tabs=4 -RFX
 [diff]
   external = ~/bin/git_diff
 [merge]
@@ -18,3 +17,5 @@
   insteadOf = salsa:
 [credential]
 	helper = cache
+[init]
+	defaultBranch = main

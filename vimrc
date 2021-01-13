@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Tue Dec 15, 2020 at 12:02 PM +0100
+" Last Change: Wed Jan 13, 2021 at 10:16 AM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -44,6 +44,9 @@ Plug 'seb-mueller/kwbdi.vim'
 " Version control
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'samoshkin/vim-mergetool'
+let g:mergetool_layout = 'mr'
+let g:mergetool_prefer_revision = 'local'
 
 " File system exploration
 Plug 'scrooloose/nerdtree'
