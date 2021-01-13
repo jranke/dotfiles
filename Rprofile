@@ -14,8 +14,8 @@ local({
 
 # littler does not read .Renviron, therefore do this here
 Sys.setenv(LANGUAGE = "en")
-Sys.setenv(R_CHECK_CRAN_INCOMING_REMOTE = FALSE)
-Sys.setenv(NOT_CRAN = TRUE)
+Sys.setenv(R_CHECK_CRAN_INCOMING_REMOTE = "false")
+Sys.setenv(NOT_CRAN = "true")
 
 # For (re)installing PythonInR
 #Sys.setenv(USESPECIALPYTHONVERSION="python3")
