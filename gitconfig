@@ -9,8 +9,12 @@
   excludesfile = ~/.gitignore
   autocrlf = input
   pager = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less --tabs=4 -RFX
+[diff]
+  external = ~/bin/git_diff
 [merge]
   tool = vimdiff
 [url "git@salsa.debian.org:"]
   pushInsteadOf = https://salsa.debian.org/
   insteadOf = salsa:
+[credential]
+	helper = cache

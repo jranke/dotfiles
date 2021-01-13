@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Wed Nov 04, 2020 at 02:32 PM +0100
+" Last Change: Tue Dec 15, 2020 at 12:02 PM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -60,7 +60,7 @@ let R_pdfviewer = 'okular'
 let R_openpdf = 1
 let R_min_editor_width = 100
 let R_rconsole_width = 80
-let R_rmdchunk = '``'
+"let R_rmdchunk = '``'
 let R_debug = 0
 "let RStudio_cmd = '/usr/bin/rstudio'
 Plug 'mllg/vim-devtools-plugin'
