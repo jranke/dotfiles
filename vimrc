@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Wed Jan 13, 2021 at 10:16 AM +0100
+" Last Change: Sat Feb 27, 2021 at 11:39 AM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -64,8 +64,9 @@ let R_openpdf = 1
 let R_min_editor_width = 100
 let R_rconsole_width = 80
 "let R_rmdchunk = '``'
-let R_debug = 0
+"let R_debug = 0
 "let RStudio_cmd = '/usr/bin/rstudio'
+
 Plug 'mllg/vim-devtools-plugin'
 
 " The following is adapted from issue https://github.com/jalvesaq/Nvim-R/issues/476
@@ -75,6 +76,9 @@ function StartRdevel()
 endfunction
 
 nmap ,rx :call StartRdevel()<CR>
+
+" julia
+Plug 'JuliaEditorSupport/julia-vim'
 
 call plug#end()
 

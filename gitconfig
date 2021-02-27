@@ -9,7 +9,7 @@
   excludesfile = ~/.gitignore
   autocrlf = input
 [diff]
-  external = ~/bin/git_diff
+#  external = ~/bin/git_diff
 [merge]
   tool = vimdiff
 [url "git@salsa.debian.org:"]

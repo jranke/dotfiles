@@ -121,4 +121,7 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 # }}}
+# {{{ PATH again
+PATH=~/.local/bin:"${PATH}"
+# }}}
 export EDITOR PATH
