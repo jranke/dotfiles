@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Fri Mar 05, 2021 at 05:52 AM +0100
+" Last Change: Fri Apr 16, 2021 at 02:36 PM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -53,6 +53,9 @@ Plug 'scrooloose/nerdtree'
 
 " Bracketed paste
 Plug 'ConradIrwin/vim-bracketed-paste'
+
+" Show and manage marks
+Plug 'kshenoy/vim-signature'
 
 " R plugin {{{1
 Plug 'jalvesaq/Nvim-R'
