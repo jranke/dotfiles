@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Mon Apr 19, 2021 at 10:46 AM +0200
+" Last Change: Mon Sep 20, 2021 at 04:36 PM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -70,6 +70,7 @@ let R_rconsole_width = 80
 let R_debug = 1
 let R_dbg_jump = 1
 "let RStudio_cmd = '/usr/bin/rstudio'
+let R_nvim_wd = 1 " set working dir to vims working dir
 
 Plug 'mllg/vim-devtools-plugin'
 
