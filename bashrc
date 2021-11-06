@@ -12,20 +12,12 @@ else
 		EDITOR=/usr/bin/vi
     fi
 fi
+export EDITOR
 # }}}
 # R {{{
 # littler scripts distributed with the littler package
 PATH=/usr/local/lib/R/site-library/littler/examples:"${PATH}"
 PATH=/usr/lib/R/site-library/littler/examples:"${PATH}"
-
-# Go back 
-# RPython
-#export RPYTHON_PYTHON_VERSION=3
-
-# python3-uno from RPython
-#PATH=/usr/lib/libreoffice/program:"${PATH}"
-
-alias tarxz='tar --use-compress-program=pxz -c -v -f'
 
 # Path where the R sources are
 export RTOP=~/svn/R
@@ -121,7 +113,13 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 # }}}
-# {{{ PATH again
+# {{{ local/bin
 PATH=~/.local/bin:"${PATH}"
+export PATH
 # }}}
-export EDITOR PATH
+# {{{ virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
+source /usr/local/bin/virtualenvwrapper.sh
+# }}}
