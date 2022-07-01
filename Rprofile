@@ -17,10 +17,7 @@ Sys.setenv(LANGUAGE = "en")
 Sys.setenv(R_CHECK_CRAN_INCOMING_REMOTE = "false")
 Sys.setenv(NOT_CRAN = "true")
 
-# For (re)installing PythonInR
-Sys.setenv(USESPECIALPYTHONVERSION="python3")
-
-if (interactive()) {
-  suppressMessages(require(reprex))
-  suppressMessages(require(usethis))
-}
+#if (interactive()) {
+#  suppressMessages(require(reprex))
+#  suppressMessages(require(usethis))
+#}

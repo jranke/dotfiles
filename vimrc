@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Mon Sep 20, 2021 at 04:36 PM +0200
+" Last Change: Fri Jul 01, 2022 at 11:47 AM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -16,6 +16,9 @@ set hid "que to slow buffer switching, see https://github.com/neovim/neovim/issu
 " to ease the use of plugin mappings
 let maplocalleader = ","
 let mapleader = ";"
+
+" lilypond runtime (https://wiki.debian.org/LilyPond)
+set runtimepath+=/usr/share/lilypond/2.22.0/vim/
 
 " Plugins managed by vim-plug {{{1
 call plug#begin('~/.vim/plugged')
@@ -50,6 +53,7 @@ let g:mergetool_prefer_revision = 'local'
 
 " File system exploration
 Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf'
 
 " Bracketed paste
 Plug 'ConradIrwin/vim-bracketed-paste'
@@ -57,9 +61,13 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 " Show and manage marks
 Plug 'kshenoy/vim-signature'
 
+" vimcmdline plugin {{{1
+Plug 'jalvesaq/vimcmdline'
+let cmdline_map_start = '<LocalLeader>s'
+
 " R plugin {{{1
-Plug 'jalvesaq/Nvim-R'
-"Plug '~/git/Nvim-R', { 'branch': 'rstudio' }
+"Plug 'jalvesaq/Nvim-R'
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
 let R_assign = 0
 let R_pdfviewer = 'okular'
@@ -74,13 +82,14 @@ let R_nvim_wd = 1 " set working dir to vims working dir
 
 Plug 'mllg/vim-devtools-plugin'
 
-" The following is adapted from issue https://github.com/jalvesaq/Nvim-R/issues/476
-function StartRdevel()
-    let g:R_path = '~/svn/R/r-devel/build/bin'
-    call StartR("R-devel")
+" The following is taken from issue https://github.com/jalvesaq/Nvim-R/issues/476
+function StartRFromPath(path)
+    let g:R_path = a:path
+    call StartR("R")
 endfunction
 
-nmap ,rx :call StartRdevel()<CR>
+nmap ,rx :call StartRFromPath('/home/jranke/svn/R/r-devel/build/bin')<CR>
+nmap ,ry :call StartRFromPath('/home/jranke/svn/R/r-4-1/build/bin')<CR>
 
 " julia
 Plug 'JuliaEditorSupport/julia-vim'
@@ -110,9 +119,9 @@ noremap \bb i\begin{block}{}<CR><CR>\end{block}<CR><ESC>3k14li
 noremap \bc i\begin{center}<CR><CR>\end{center}<CR><ESC>2ki
 noremap \bf i\begin{frame}{}<Space>%{{{3<CR><CR>\end{frame}<CR><ESC>3k14li
 noremap \bi i\begin{itemize}[<+->]<CR>\item <CR>\end{itemize}<ESC>k8li
-noremap \bo i\begin{columns}<CR>\begin{column}{}<CR>\end{column}<CR>\end{columns}<CR><ESC>3k17li
+noremap \bo i\begin{columns}<CR>\begin{column}{.5\textwidth}<CR>\end{column}<CR>\begin{column}{.5\textwidth}<CR>\end{column}<CR>\end{columns}<CR><ESC>6ki
 noremap \bs i\source{}<ESC>li
-noremap \bt i\begin{table}\begin{tabular}{}<CR><CR>\end{tabular}\end{table}<CR><ESC>3ki
+noremap \bt i\begin{tabular}{}<CR><CR>\end{tabular}<CR><ESC>3k$i
 noremap \eq i\question[2]<CR>\begin{solution}[2cm]<CR>\end{solution}<CR><ESC>3kA
 
 " EnhancedCommentify {{{1
