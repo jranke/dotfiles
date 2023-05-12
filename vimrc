@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Fri Jul 01, 2022 at 11:47 AM +0200
+" Last Change: Sun Apr 30, 2023 at 08:27 AM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -169,4 +169,7 @@ if has('nvim')
   tnoremap <A-l> <C-\><C-n><C-w>l
 endif
 colorscheme desert
+" XML editing
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
 " {{{1 vim: foldmethod=marker foldlevel=0 ts=2 sw=2 expandtab
