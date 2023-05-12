@@ -26,18 +26,6 @@ export RTOP=~/svn/R
 export DEBEMAIL=jranke@uni-bremen.de
 export DEBFULLNAME="Johannes Ranke"
 # }}}
-# rdkit {{{
-# RDKIT (commented out on 2015-10-02 as I am using the Debian package python-rdkit
-#export PYTHONPATH="${PYTHONPATH}:$RDBASE:$HOME/ariance/aeras/libreoffice:$HOME/py"
-# commented back in as switching to LibreOffice 5 from backports makes using python3 necessary
-# The cmake command I used to try to build rdkit on stretch (2018-03-01) was
-# cmake -D PYTHON_LIBRARY=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/libpython3.5m.a -D PYTHON_INCLUDE_DIR=/usr/include/python3.5/ -D PYTHON_EXECUTABLE=/usr/bin/python3 -DRDK_BUILD_INCHI_SUPPORT=ON ..
-# However, then I get bitten by https://gitlab.kitware.com/cmake/cmake/issues/16391 which is unresolved
-# Therefore, as I do not want to compile boost from source for now, go back to python2.7 and comment the following again...
-#export RDBASE="$HOME/git/rdkit"
-#export LD_LIBRARY_PATH="$RDBASE/lib"
-#export PYTHONPATH="${PYTHONPATH}:$RDBASE"
-# }}}
 # prompt {{{
 force_color_prompt=yes
 
@@ -91,19 +79,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias lh='ls -lh'
-# }}}
-# alert {{{
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-# }}}
-# bash completion {{{
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
 # }}}
 # {{{varia
 # check the window size after each command and, if necessary,
