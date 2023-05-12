@@ -1,0 +1,60 @@
+#!/usr/bin/env Rscript
+# Diff tool for comparing the objects in two R data files
+#
+# Author: Johannes Ranke <johannes.ranke@jrwb.de>
+# ULR: https://github.com/jranke/dotfiles/bin/rda_diff
+# Last Change: Fri May 12, 2023 at 04:36 PM +0200
+
+# Load required packages {{{1
+suppressMessages({
+  if (!require(docopt)) {
+    stop("Please install the 'docopt' package")
+  }
+  if (!require(waldo)) {
+    stop("Please install the 'waldo' package")
+  }
+})
+
+# Define usage in docopt syntax {{{1
+doc <- "Usage: rda_diff.R [-m --max-diffs] <reference_file> <test_file>
+
+Options:
+ -m --max-diffs MAXDIFFS  Maximum number of differences shown [default: 10]"
+
+# Load and process options {{{1
+opt <- try(docopt(doc), silent = TRUE)
+if (inherits(opt, "try-error")) {
+  stop(doc)
+}
+
+# Load and compare objects {{{1
+# Create environments to load object into
+env_ref <- new.env()
+env_test <- new.env()
+
+# Load objects into environments and get their names
+o_ref <- load(opt$reference_file, env_ref)
+o_test <- load(opt$test_file, env_test)
+
+# Report new and deleted objects
+if (length(o_new <- setdiff(o_ref, o_test)) > 0) {
+  cat("New objects in", opt$test_file, ":\n")
+  cat(paste(o_new, collapse = ", "))
+  cat("\n")
+}
+if (length(o_del <- setdiff(o_test, o_ref)) > 0) {
+  cat("Objects missing in", opt$test_file, ":\n")
+  cat(paste(o_del, collapse = ", "))
+  cat("\n")
+}
+
+# Compare objects present in both files
+for (o in intersect(o_ref, o_test)) {
+  ref <- get(o, env_ref)
+  test <- get(o, env_test)
+  if (!identical(ref, test)) {
+    cat("\nChanges in object", o, ":\n")
+    print(waldo::compare(ref, test, max_diffs = as.numeric(opt$m)))
+  }
+}
+# vim: set ft=r ts=2 sw=2 expandtab foldmethod=marker:

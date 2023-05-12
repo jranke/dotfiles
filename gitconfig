@@ -8,8 +8,12 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
-[diff]
-#  external = ~/bin/git_diff
+[difftool]
+	prompt = false
+[difftool "rda_diff"]
+  cmd = ~/bin/rda_diff $LOCAL $REMOTE
+[difftool "rda_diff_inf"]
+  cmd = ~/bin/rda_diff -m Inf $LOCAL $REMOTE
 [merge]
   tool = vimdiff
 [url "git@salsa.debian.org:"]
