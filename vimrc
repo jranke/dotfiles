@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Sun Apr 30, 2023 at 08:27 AM +0200
+" Last Change: Fri May 12, 2023 at 09:53 PM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -33,7 +33,6 @@ Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
 " Appearance
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/goyo.vim'
 
 "Plug 'jalvesaq/R-Vim-runtime'
 Plug '~/git/R-Vim-runtime'
@@ -74,13 +73,9 @@ let R_pdfviewer = 'okular'
 let R_openpdf = 1
 let R_min_editor_width = 100
 let R_rconsole_width = 80
-"let R_rmdchunk = '``'
 let R_debug = 1
 let R_dbg_jump = 1
-"let RStudio_cmd = '/usr/bin/rstudio'
 let R_nvim_wd = 1 " set working dir to vims working dir
-
-Plug 'mllg/vim-devtools-plugin'
 
 " The following is taken from issue https://github.com/jalvesaq/Nvim-R/issues/476
 function StartRFromPath(path)
