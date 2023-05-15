@@ -92,9 +92,3 @@ shopt -s checkwinsize
 PATH=~/.local/bin:"${PATH}"
 export PATH
 # }}}
-# {{{ virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
-source /usr/local/bin/virtualenvwrapper.sh
-# }}}

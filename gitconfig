@@ -1,8 +1,11 @@
 # vim: ft=gitconfig
 [user]
-  name = Johannes Ranke
-  email = jranke@uni-bremen.de
-  signingkey = E19F 5F87 1288 99B1 92B1  A2C2 AD5F 960A 256A 04AF
+	name = Ranke Johannes
+	email = johannes.ranke@agroscope.admin.ch
+[core]
+	editor = nvim
+[config]
+	editor = /usr/bin/nvim
 [push]
   default = simple
 [core]
@@ -16,11 +19,6 @@
   cmd = ~/bin/rda_diff -m Inf $LOCAL $REMOTE
 [merge]
   tool = vimdiff
-[url "git@salsa.debian.org:"]
-  pushInsteadOf = https://salsa.debian.org/
-  insteadOf = salsa:
-[credential]
-	helper = cache
 [init]
 	defaultBranch = main
 [pull]
