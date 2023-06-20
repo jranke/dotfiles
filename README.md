@@ -8,7 +8,7 @@ cd dotfiles
 make
 ```
 
-This will call the [install]{install} script from this repository, which links
+This will call the [install](install) script from this repository, which links
 each configuration file from the dotfiles directory to a dotfile in the users
 home directory.
 
