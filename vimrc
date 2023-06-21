@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Fri May 12, 2023 at 09:53 PM +0200
+" Last Change: Wed Jun 21, 2023 at 10:09 AM +0200
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -144,7 +144,7 @@ endfunction
 
 " Airline {{{1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline#extensions#branch#enabled = 1
 let g:airline_theme='wombat'
 call airline#parts#define_function('syntax', 'SyntaxItem')
