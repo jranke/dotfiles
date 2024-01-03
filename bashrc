@@ -1,4 +1,9 @@
 # vim: foldmethod=marker ts=4 sw=4
+# For stuff that is local to the machine or network {{{
+if [ -f ~/.bashrc_local ]; then
+    . ~/.bashrc_local
+fi
+# }}}
 # editor {{{
 # Prefer neovim over vim over vi
 if [ -e /usr/bin/nvim ]
