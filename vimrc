@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Wed Jun 21, 2023 at 10:09 AM +0200
+" Last Change: Fri Dec 01, 2023 at 03:26 PM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -83,6 +83,7 @@ function StartRFromPath(path)
     call StartR("R")
 endfunction
 
+nmap <LocalLeader>: :RSend 
 nmap ,rx :call StartRFromPath('/home/jranke/svn/R/r-devel/build/bin')<CR>
 nmap ,ry :call StartRFromPath('/home/jranke/svn/R/r-4-1/build/bin')<CR>
 
