@@ -12,3 +12,5 @@
 ~$*.xlk*
 ~$*.ppt*
 
+# tmp directories within projects
+tmp/
