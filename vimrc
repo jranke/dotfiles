@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Fri Dec 01, 2023 at 03:26 PM +0100
+" Last Change: Wed Jan 10, 2024 at 09:10 AM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -33,6 +33,8 @@ Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
 " Appearance
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" turn off trailing whitespace detection for easier collaboration using git
+let g:airline#extensions#whitespace#enabled = 0
 
 "Plug 'jalvesaq/R-Vim-runtime'
 Plug '~/git/R-Vim-runtime'
