@@ -2,8 +2,8 @@
 # Diff tool for comparing the objects in two R data files
 #
 # Author: Johannes Ranke <johannes.ranke@jrwb.de>
-# ULR: https://github.com/jranke/dotfiles/bin/rda_diff
-# Last Change: Tue Jun 20, 2023 at 08:52 AM +0200
+# ULR: https://github.com/jranke/dotfiles/blob/main/bin/rda_diff
+# Last Change: Wed Jan 31, 2024 at 01:29 PM +0100
 
 # Load required packages {{{1
 suppressMessages({
