@@ -18,6 +18,7 @@ Sys.setenv(R_CHECK_CRAN_INCOMING_REMOTE = "false")
 Sys.setenv(NOT_CRAN = "true")
 
 if (interactive()) {
+  suppressMessages(require(stats))
   suppressMessages(require(dplyr))
   suppressMessages(require(tidyr))
   suppressMessages(require(reprex))
