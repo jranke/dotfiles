@@ -1,7 +1,7 @@
 # vim: ft=gitconfig
 [user]
   name = Johannes Ranke
-  email = jranke@uni-bremen.de
+  email = johannes.ranke@jrwb.de
   signingkey = E19F 5F87 1288 99B1 92B1  A2C2 AD5F 960A 256A 04AF
 [push]
   default = simple
