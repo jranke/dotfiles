@@ -1,17 +1,7 @@
 # vim: foldmethod=marker ts=4 sw=4
 # editor {{{
 # Prefer neovim over vim over vi
-if [ -e /usr/bin/nvim ]
-then
-    EDITOR=/usr/bin/nvim
-else
-    if [ -e /usr/bin/vim ]
-    then
-		EDITOR=/usr/bin/vim
-    else
-		EDITOR=/usr/bin/vi
-    fi
-fi
+EDITOR=vim
 export EDITOR
 # }}}
 # R {{{
