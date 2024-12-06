@@ -22,6 +22,9 @@ PATH=/usr/lib/R/site-library/littler/examples:"${PATH}"
 # Path where the R sources are
 export RTOP=~/svn/R
 # }}}
+# Julia {{{
+alias julia='/home/jranke/git/julia/julia'
+# }}}
 # debian {{{
 export DEBEMAIL=jranke@uni-bremen.de
 export DEBFULLNAME="Johannes Ranke"
@@ -97,4 +100,8 @@ export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
 source /usr/local/bin/virtualenvwrapper.sh
+# }}}
+# {{{ reticulate
+export RETICULATE_PYTHON=/usr/bin/python3
+export RETICULATE_AUTOCONFIGURE=FALSE 
 # }}}

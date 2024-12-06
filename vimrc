@@ -1,5 +1,5 @@
 " vimrc of Johannes Ranke
-" Last Change: Fri May 12, 2023 at 09:53 PM +0200
+" Last Change: Fri Dec 06, 2024 at 01:12 PM +0100
 " default settings (much is handled by tpope/sensible) {{{1
 set ts=2
 set sw=2
@@ -28,13 +28,13 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-scriptease' " gives me K for looking up docs in vim scripts
 Plug 'hrp/EnhancedCommentify'
 Plug 'vim-scripts/DeleteTrailingWhitespace'
-Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
+"Plug 'jranke/lastchange.vim', { 'branch': 'jranke' }
 
 " Appearance
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-"Plug 'jalvesaq/R-Vim-runtime'
+Plug 'jalvesaq/R-Vim-runtime'
 Plug '~/git/R-Vim-runtime'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -45,7 +45,7 @@ Plug 'seb-mueller/kwbdi.vim'
 
 " Version control
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter', { 'branch': 'main' }
 Plug 'samoshkin/vim-mergetool'
 let g:mergetool_layout = 'mr'
 let g:mergetool_prefer_revision = 'local'
@@ -60,13 +60,15 @@ Plug 'ConradIrwin/vim-bracketed-paste'
 " Show and manage marks
 Plug 'kshenoy/vim-signature'
 
+" Wayland clipboard
+Plug 'jasonccox/vim-wayland-clipboard'
+
 " vimcmdline plugin {{{1
 Plug 'jalvesaq/vimcmdline'
 let cmdline_map_start = '<LocalLeader>s'
 
 " R plugin {{{1
-"Plug 'jalvesaq/Nvim-R'
-Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+Plug 'jalvesaq/Nvim-R'
 vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
 let R_assign = 0
 let R_pdfviewer = 'okular'
