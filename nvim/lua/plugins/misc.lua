@@ -1,8 +1,5 @@
 return {
-  -- airline
-  { "vim-airline/vim-airline" },
-  { "vim-airline/vim-airline-themes" },
-
+  
   -- pandoc
   { "vim-pandoc/vim-pandoc" },
   { "vim-pandoc/vim-pandoc-syntax" },
@@ -16,7 +13,12 @@ return {
   -- Version control
   { "tpope/vim-fugitive" },
   { "airblade/vim-gitgutter" },
-  { "samoshkin/vim-mergetool" },
+  { "samoshkin/vim-mergetool",
+    init = function()
+        vim.g.mergetool_layout = 'mr'
+        vim.g.mergetool_prefer_revision = 'local'
+      end,
+  },
 
   -- Show an manage marks
   { "kshenoy/vim-signature" },
@@ -25,6 +27,18 @@ return {
   { "jasonccox/vim-wayland-clipboard" },
   
   -- vimcmdline
-  { "jalvesaq/vimcmdline" },
+  { "jalvesaq/vimcmdline",
+    init = function()
+        vim.b.cmdline_map_start = '<LocalLeader>s'
+      end,
+  },
 
+  -- fzf
+  { "junegunn/fzf" },
+
+  -- Look up docs in vim scripts with 'K'
+  { "tpope/vim-scriptease" },
+
+  -- Delete trailing whitespace
+  { "vim-scripts/DeleteTrailingWhitespace" }
 }
