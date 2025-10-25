@@ -12,3 +12,4 @@
 ~$*.xlk*
 ~$*.ppt*
 
+.wine/dosdevices/**
