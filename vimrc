@@ -169,4 +169,6 @@ colorscheme desert
 " XML editing
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
+" https://github.com/vim-pandoc/vim-pandoc-syntax/issues/386
+"exec 'hi String guifg=' . synIDattr(synIDtrans(hlID('String')), 'fg', 'cterm')
 " {{{1 vim: foldmethod=marker foldlevel=0 ts=2 sw=2 expandtab

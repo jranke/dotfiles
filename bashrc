@@ -50,7 +50,7 @@ unset color_prompt force_color_prompt
 # history {{{
 # See bash(1) for more options
 HISTCONTROL=ignoredups:ignorespace
-shopt -s histappend
+#shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 # }}}
@@ -76,7 +76,7 @@ alias lh='ls -lh'
 # {{{varia
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+#shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -84,12 +84,6 @@ shopt -s checkwinsize
 # {{{ local/bin
 PATH=~/.local/bin:"${PATH}"
 export PATH
-# }}}
-# {{{ virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
-source /usr/local/bin/virtualenvwrapper.sh
 # }}}
 # {{{ reticulate
 export RETICULATE_PYTHON=/usr/bin/python3
