@@ -70,6 +70,8 @@ let cmdline_map_start = '<LocalLeader>s'
 " R plugin {{{1
 Plug 'jalvesaq/Nvim-R'
 vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
+imap ,, <SPACE>\|><CR>
+vmap ,, a \|><CR>
 let R_assign = 0
 let R_pdfviewer = 'okular'
 let R_openpdf = 1
