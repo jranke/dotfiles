@@ -29,7 +29,7 @@ fi
 # scripts
 mkdir -pv ~/bin
 for bin in $BASE/bin/*; do
-  ln -svf $bin ~/bin
+  ln -svf $bin ~/.local/bin
 done
 
 # install vim-plug
