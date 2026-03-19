@@ -70,6 +70,8 @@ let cmdline_map_start = '<LocalLeader>s'
 " R plugin {{{1
 Plug 'jalvesaq/Nvim-R'
 vmap r <Esc>:call SendSelectionToR("echo", "down")<CR>
+imap ,, <SPACE>\|><CR>
+vmap ,, a \|><CR>
 let R_assign = 0
 let R_pdfviewer = 'okular'
 let R_openpdf = 1
@@ -169,4 +171,6 @@ colorscheme desert
 " XML editing
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
+" https://github.com/vim-pandoc/vim-pandoc-syntax/issues/386
+"exec 'hi String guifg=' . synIDattr(synIDtrans(hlID('String')), 'fg', 'cterm')
 " {{{1 vim: foldmethod=marker foldlevel=0 ts=2 sw=2 expandtab

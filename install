@@ -6,7 +6,7 @@ cd $(dirname $BASH_SOURCE)
 BASE=$(pwd)
 
 # dotfiles to install
-for dotfile in gitconfig gitignore Rprofile reportbugrc; do
+for dotfile in bashrc gitconfig gitignore Rprofile reportbugrc vimrc zshrc p10k.zsh; do
   mkdir -pv bak  
   [ -e ~/.$dotfile ] && mv -v ~/.$dotfile bak/.$dotfile
   ln -sfv $BASE/$dotfile ~/.$dotfile
@@ -20,13 +20,8 @@ if [ ! -e ~/.config/nvim ]; then
   ln -sfv $BASE/nvim ~/.config/nvim
 fi
 
-# git-prompt
-if [ ! -e ~/.git-prompt.sh ]; then
-  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
-fi
-
 # scripts
-mkdir -pv ~/bin
+mkdir -pv ~/.local/bin
 for bin in $BASE/bin/*; do
-  ln -svf $bin ~/bin
+  ln -svf $bin ~/.local/bin
 done

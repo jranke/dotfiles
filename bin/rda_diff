@@ -3,7 +3,7 @@
 #
 # Author: Johannes Ranke <johannes.ranke@jrwb.de>
 # ULR: https://github.com/jranke/dotfiles/bin/rda_diff
-# Last Change: Fri May 12, 2023 at 04:36 PM +0200
+# Last Change: Tue Jun 20, 2023 at 08:52 AM +0200
 
 # Load required packages {{{1
 suppressMessages({
@@ -16,7 +16,7 @@ suppressMessages({
 })
 
 # Define usage in docopt syntax {{{1
-doc <- "Usage: rda_diff.R [-m --max-diffs] <reference_file> <test_file>
+doc <- "Usage: rda_diff [-m --max-diffs] <reference_file> <test_file>
 
 Options:
  -m --max-diffs MAXDIFFS  Maximum number of differences shown [default: 10]"
