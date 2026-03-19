@@ -6,7 +6,7 @@ cd $(dirname $BASH_SOURCE)
 BASE=$(pwd)
 
 # dotfiles to install
-for dotfile in bashrc gitconfig gitignore Rprofile reportbugrc vimrc zshrc p10k.zsh; do
+for dotfile in bashrc gitconfig gitignore Rprofile reportbugrc zshrc p10k.zsh; do
   mkdir -pv bak  
   [ -e ~/.$dotfile ] && mv -v ~/.$dotfile bak/.$dotfile
   ln -sfv $BASE/$dotfile ~/.$dotfile
