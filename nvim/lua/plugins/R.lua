@@ -36,7 +36,7 @@ return {
             },
         }
         opts.auto_start = "on startup"
-        opts.objbr_auto_start = true
+        opts.objbr_auto_start = false
         opts.roxygen_hl = true
         require("r").setup(opts)
     end,
