@@ -40,4 +40,4 @@ return {
         opts.roxygen_hl = true
         require("r").setup(opts)
     end,
-q
+}
